@@ -2,6 +2,7 @@ package com.ltcode.recipeapp.bootstrap;
 
 import com.ltcode.recipeapp.domain.Recipe;
 import com.ltcode.recipeapp.repositories.RecipeRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,7 +11,7 @@ public class DataInitializer implements CommandLineRunner {
 
     private RecipeRepository recipeRepository;
 
-    public DataInitializer(RecipeRepository recipeRepository) {
+    public DataInitializer(@Qualifier("recipeRepositoryMap") RecipeRepository recipeRepository) {
         this.recipeRepository = recipeRepository;
     }
 

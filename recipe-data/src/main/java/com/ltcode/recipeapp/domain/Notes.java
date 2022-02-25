@@ -1,8 +1,10 @@
 package com.ltcode.recipeapp.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.OneToOne;
 
+@Entity
 public class Notes extends BaseEntity {
 
     @OneToOne
